@@ -1,5 +1,45 @@
-# Project
 
+# OpenAI Samples
+
+This repository contains samples demonstrating how to use GPT and ChatGpt via python SDK or REST API.
+
+<br>
+
+## Installation
+Install all of the Python modules and packages listed in the requirements.txt file using the below command.
+
+```python
+pip install -r requirements.txt
+```
+
+
+### Microsoft Azure Endpoints
+In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set OPENAI_API_KEY, RESOURCE_NAME & DEPLOYMENT_NAME in _config.json_ file.
+
+```js
+{
+    "DEPLOYMENT_NAME":"<GPT model name>",
+    "RESOURCE_NAME":"<your azure resource name>",
+    "OPENAI_API_KEY":"<your_api_key>"
+}
+``` 
+
+Learn more about Azure OpenAI Service REST API here:
+https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference
+
+## Example code
+Sample codes for various use case scenario using GPT/ChatGPT can be found in respective 'Python SDK' & 'RestAPI' folders. 
+
+
+## Requirements
+Python 3.7.1+
+
+
+<br>
+<br>
+
+
+# Project
 > This repo has been populated by an initial template to help get you started. Please
 > make sure to update the content to build a great experience for community-building.
 
@@ -31,3 +71,5 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+
