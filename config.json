@@ -1,0 +1,5 @@
+{
+    "DEPLOYMENT_NAME":"text_davinci_003",
+    "RESOURCE_NAME":"qnadevoai",
+    "OPENAI_API_KEY":"9abff4e2bbe440a5aa0c0dc8aca80a2e"
+}
