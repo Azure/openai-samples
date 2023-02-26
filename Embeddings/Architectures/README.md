@@ -21,7 +21,7 @@ Of these factors, the number of embeddings you have is the more important one. I
 
 If you have a higher number of embeddings or need to be updating the embeddings index in real time, using a vector database like RediSearch is likely a better option.
 
-### [Option 1: Embeddings retrieval with Azure Functions](./Embeddings%20with%20Azure%20Functions/README.md)
+### [Option 1: Embeddings retrieval with Azure Functions](./Embeddings%20with%20Azure%20Functions/)
 
 <img src="images/azure_function_architecture.png" width="600">
 
