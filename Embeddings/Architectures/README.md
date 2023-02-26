@@ -29,7 +29,7 @@ For scenarios with a small number of embeddings (less than 10,000), the simplest
 
 In this example, we use an Azure Function with the Faiss library to do the processing and an Azure Table to store the data. You could follow this same pattern with other data stores, vector libraries, and compute options.
 
-### [Option 2: Embeddings retrieval with RediSearch](/2_RediSearch/)
+### [Option 2: Embeddings retrieval with RediSearch](/Embeddings%20with%20RediSearch/)
 
 ![RediSearch Architecture](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna/blob/main/docs/architecture.png?raw=true)
 *This full architecture is hosted at https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna.*
@@ -37,12 +37,10 @@ In this example, we use an Azure Function with the Faiss library to do the proce
 
 **Redis Enterprise on Azure** is a first-party service that supports approximate nearest neighbors search out of the box. ANN search in Redis is supported through the [RediSearch](https://redis.io/docs/stack/search/reference/vectors/) module which makes it a great option for scenarios when you need to search through a large number of embeddings or need to frequently update vectors/metadata in the index.
 
+In this folder, we'll show you how to use RediSearch to work with OpenAI embeddings. We'll show you both how to use RediSearch from Azure Cache for Redis and also how to use it with a docker container.
+
 For more details and examples on using Redis for vector search, see:
 - [Vector Similarity Search: From Basics to Production](https://mlops.community/vector-similarity-search-from-basics-to-production/)
 - [AI-Powered Document Search in Redis](https://datasciencedojo.com/blog/ai-powered-document-search/)
 - [Rediscover Redis for Vector Similarity Search](https://redis.com/blog/rediscover-redis-for-vector-similarity-search/)
 - [arXiv Paper Search with Redis](https://github.com/RedisVentures/redis-arXiv-search)
-
-#### [Option 2b: Redis in a container](/2_RediSearch/docker)
-
-If you want to use RediSearch but don't need the full power of Redis Enterprise on ACRE, you can also host RediSearch on a container in Azure. This folder contains a docker-compose file to create and deploy a RediSearch container.
