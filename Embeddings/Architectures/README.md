@@ -31,13 +31,14 @@ In this example, we use an Azure Function with the Faiss library to do the proce
 
 ### [Option 2: Embeddings retrieval with RediSearch](/Embeddings%20with%20RediSearch/)
 
-![RediSearch Architecture](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna/blob/main/docs/architecture.png?raw=true)
-*This full architecture is hosted at https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna.*
+![RediSearch Architecture](images/redisearch_architecture.png)
 
 
 **Redis Enterprise on Azure** is a first-party service that supports approximate nearest neighbors search out of the box. ANN search in Redis is supported through the [RediSearch](https://redis.io/docs/stack/search/reference/vectors/) module which makes it a great option for scenarios when you need to search through a large number of embeddings or need to frequently update vectors/metadata in the index.
 
 In this folder, we'll show you how to use RediSearch to work with OpenAI embeddings. We'll show you both how to use RediSearch from Azure Cache for Redis and also how to use it with a docker container.
+
+There's another great example of how to use RediSearch with OpenAI embeddings at [https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna](https://github.com/ruoccofabrizio/azure-open-ai-embeddings-qna).
 
 For more details and examples on using Redis for vector search, see:
 - [Vector Similarity Search: From Basics to Production](https://mlops.community/vector-similarity-search-from-basics-to-production/)
