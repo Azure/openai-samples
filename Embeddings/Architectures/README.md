@@ -23,7 +23,7 @@ If you have a higher number of embeddings or need to be updating the embeddings 
 
 ### [Option 1: Embeddings retrieval with Azure Functions](/Embeddings%20with%20Azure%20Functions/)
 
-![Azure Function Architecture](images/azure_function_architecture.png)
+<img src="images/azure_function_architecture.png" width="600">
 
 For scenarios with a small number of embeddings (less than 10,000), the simplest option is to create a vector index in application memory using Faiss and only refresh the data when needed. This works well at small scales because the data can **easily fit in memory**, can be pulled from the data source in a few seconds, and it only takes a few milliseconds to compare all of the embeddings to the user input.
 
@@ -31,7 +31,7 @@ In this example, we use an Azure Function with the Faiss library to do the proce
 
 ### [Option 2: Embeddings retrieval with RediSearch](/Embeddings%20with%20RediSearch/)
 
-![RediSearch Architecture](images/redisearch_architecture.png)
+<img src="images/redisearch_architecture.png" width="600">
 
 
 **Redis Enterprise on Azure** is a first-party service that supports approximate nearest neighbors search out of the box. ANN search in Redis is supported through the [RediSearch](https://redis.io/docs/stack/search/reference/vectors/) module which makes it a great option for scenarios when you need to search through a large number of embeddings or need to frequently update vectors/metadata in the index.
