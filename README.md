@@ -40,7 +40,7 @@ In order to use the Open AI library or REST API with Microsoft Azure endpoints, 
 Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
 ## Example code
-Sample codes for various use case scenario using GPT/ChatGPT can be found in respective 'Python SDK' & 'RESTAPI' folders. 
+Sample codes for various use case scenario using GPT/ChatGPT can be found in respective 'Python SDK' & 'RestAPI' folders. 
 
 
 ## Requirements
