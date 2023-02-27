@@ -3,6 +3,16 @@
 
 Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex and Embeddings model series. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
 
+# How do I get access to Azure OpenAI?
+
+Access is currently limited as we navigate high demand, upcoming product improvements, and  [Microsoft’s commitment to responsible AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6). For now, we're working with customers with an existing partnership with Microsoft, lower risk use cases, and those committed to incorporating mitigations. In addition to applying for initial access, all solutions using Azure OpenAI are required to go through a use case review before they can be released for production use.
+
+More specific information is included in the application form. We appreciate your patience as we work to responsibly enable broader access to Azure OpenAI.
+
+Apply here for initial access or for a production review: [Apply now](https://aka.ms/oaiapply)
+
+All solutions using Azure OpenAI are also required to go through a use case review before they can be released for production use, and are evaluated on a case-by-case basis. In general, the more sensitive the scenario the more important risk mitigation measures will be for approval.
+
 # Important concepts and terminology
 Refer to the following documents for a better understanding of Azure OpenAI concepts and the related terminology:
 
