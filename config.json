@@ -1,0 +1,5 @@
+{
+    "API_VERSION":"<OpenAI API Version>",
+    "DEPLOYMENT_NAME":"<GPT Model Name>",
+    "RESOURCE_NAME":"<Your Azure Resource Name>"
+}
