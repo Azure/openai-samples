@@ -58,6 +58,7 @@ Now, click Ok on Environment Variables window to save changes.)
 And for _Embedding_ scenario, one can use "text-embedding-ada-002" as model name.
 - Current OpenAI api version is "2022-12-01".
 
+Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
 
 ## Requirements
