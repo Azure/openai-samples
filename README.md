@@ -1,17 +1,30 @@
 
+# What is the Azure OpenAI service?
+
+Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex and Embeddings model series. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
+
+# Important concepts and terminology
+Refer to the following documents for a better understanding of Azure OpenAI concepts and the related terminology:
+
+ - [How to generate or manipulate text](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/completions) 
+ - [What are embeddings?](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/understand-embeddings)
+ - [How to generate embeddings?](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/embeddings?tabs=console)
+
+# Responsible AI with Azure OpenAI
+At Microsoft, we're committed to the advancement of AI driven by principles that put people first. Generative models such as the ones available in Azure OpenAI have significant potential benefits, but without careful design and thoughtful mitigations, such models have the potential to generate incorrect or even harmful content. Microsoft has made significant investments to help guard against abuse and unintended harm, which includes requiring applicants to show well-defined use cases, incorporating Microsoft’s [principles for responsible AI use](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6), building content filters to support customers, and providing responsible AI implementation guidance to onboarded customers.
+
+More details on the RAI guidelines for the Azure OpenAI service can be found [here](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/transparency-note?context=/azure/cognitive-services/openai/context/context).
+
 # OpenAI Samples
 
-This repository contains samples demonstrating how to use GPT and ChatGpt via python SDK or REST API.
-
-<br>
+This repository contains samples demonstrating how to use GPT and ChatGPT via Python SDK or REST API.
 
 ## Installation
-Install all of the Python modules and packages listed in the requirements.txt file using the below command.
+Install all Python modules and packages listed in the requirements.txt file using the below command.
 
 ```python
 pip install -r requirements.txt
 ```
-
 
 ### Microsoft Azure Endpoints
 In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set OPENAI_API_KEY, RESOURCE_NAME & DEPLOYMENT_NAME in _config.json_ file.
@@ -24,11 +37,10 @@ In order to use the Open AI library or REST API with Microsoft Azure endpoints, 
 }
 ``` 
 
-Learn more about Azure OpenAI Service REST API here:
-https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference
+Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
 ## Example code
-Sample codes for various use case scenario using GPT/ChatGPT can be found in respective 'Python SDK' & 'RestAPI' folders. 
+Sample codes for various use case scenario using GPT/ChatGPT can be found in respective 'Python SDK' & 'RESTAPI' folders. 
 
 
 ## Requirements
@@ -38,17 +50,6 @@ Python 3.7.1+
 <br>
 <br>
 
-
-# Project
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
 
 ## Contributing
 
