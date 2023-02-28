@@ -1,5 +1,6 @@
-{
-    "API_VERSION":"<OpenAI API Version>",
-    "DEPLOYMENT_NAME":"<GPT Model Name>",
-    "RESOURCE_NAME":"<Your Azure Resource Name>"
-}
+ {
+    "COMPLETIONS_MODEL":"<Completion Model Name>",
+    "EMBEDDING_MODEL":"<Embedding Model Name>",
+    "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
+    "OPENAI_API_VERSION":"<OpenAI API Version>"
+ }
