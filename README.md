@@ -37,33 +37,38 @@ pip install -r requirements.txt
 ```
 
 ### Microsoft Azure Endpoints
-In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set RESOURCE_NAME & DEPLOYMENT_NAME in _config.json_ file. 
+In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set COMPLETIONS_MODEL, EMBEDDING_MODEL, OPENAI_API_BASE & OPENAI_API_VERSION in _config.json_ file. 
 
 ```js
 {
-   "API_VERSION":"<OpenAI API Version>",
-   "DEPLOYMENT_NAME":"<GPT Model Name>",
-   "RESOURCE_NAME":"<Your Azure Resource Name>"
+   "COMPLETIONS_MODEL":"<Completion Model Name>",
+   "EMBEDDING_MODEL":"<Embedding Model Name>",
+   "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
+   "OPENAI_API_VERSION":"<OpenAI API Version>"
 }
 ``` 
 
-For getting started 
-- Add "OPENAI_API_KEY" and \<Your API Key Value\> in the environment variables.<br>
-( **Steps**: You can navigate to control panel > System and Security > System > Advanced system Settings. <br>
-Now in Advance System Setting click on Environment Variables. <br>
-Here we can add new user variables and new system variables. We will add user variable by clicking _New_ under user variables. <br> In the new window, you can add Variable name as "OPENAI_API_KEY" and Variable value as \<Your API Key Value\> and click ok.
-Now, click Ok on Environment Variables window to save changes.)
+### For getting started:
+- Add "OPENAI_API_KEY" as variable name and \<Your API Key Value\> as variable value in the environment variables.
+ <br>
+ **STEPS** -       
 
-- For _Completion_ scenario, one can start with using your model name("DEPLOYMENT_NAME" in _config.json_ file) as "text_davinci_003". <br>
-And for _Embedding_ scenario, one can use "text-embedding-ada-002" as model name.
+      WINDOWS Users: 
+         set [variable_name]=[variable_value]
+
+      MACOS/LINUX Users: 
+         export [variable_name]=[variable_value]
+
+- For _Completion_ scenario, one can start with using your model name("COMPLETIONS_MODEL" in _config.json_ file) as "text_davinci_003". <br>
+And for _Embedding_ scenario, one can use "text-embedding-ada-002" as model name("EMBEDDING_MODEL"in _config.json_ file).
 - Current OpenAI api version is "2022-12-01".
 
 Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
 
 ## Requirements
-Python 3.7.1+
-
+Python 3.7.1+ <br>
+Jupyter Notebook 6.5.2
 
 <br>
 <br>
