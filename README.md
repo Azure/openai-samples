@@ -56,10 +56,10 @@ One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal
  **STEPS** -       
 
       WINDOWS Users: 
-         set [variable_name]=[variable_value]
+         setx OPENAI_API_KEY "REPLACE_WITH_YOUR_KEY_VALUE_HERE"
 
       MACOS/LINUX Users: 
-         export [variable_name]=[variable_value]
+         export OPENAI_API_KEY="REPLACE_WITH_YOUR_KEY_VALUE_HERE"
 
 - For _Completion_ scenario, one can start with using your model name("COMPLETION_MODEL" in _config.json_ file) as "text_davinci_003". <br>
 And for _Embedding_ scenario, one can use "text-embedding-ada-002" as model name("EMBEDDING_MODEL"in _config.json_ file).
