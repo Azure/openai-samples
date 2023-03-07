@@ -37,14 +37,14 @@ pip install -r requirements.txt
 ```
 
 ### Microsoft Azure Endpoints
-In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set COMPLETIONS_MODEL, EMBEDDING_MODEL, OPENAI_API_BASE & OPENAI_API_VERSION in _config.json_ file. 
+In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set COMPLETIONS_MODEL, EMBEDDINGS_MODEL, OPENAI_API_BASE & OPENAI_API_VERSION in _config.json_ file. 
 
 ```js
 {
-   "COMPLETION_MODEL":"<Completion Model Name>",
-   "EMBEDDING_MODEL":"<Embedding Model Name>",
-   "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
-   "OPENAI_API_VERSION":"<OpenAI API Version>"
+    "COMPLETIONS_MODEL":"<Completions Model Name>",
+    "EMBEDDINGS_MODEL":"<Embeddings Model Name>",
+    "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
+    "OPENAI_API_VERSION":"<OpenAI API Version>"
 }
 ``` 
 
@@ -61,8 +61,8 @@ One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal
       MACOS/LINUX Users: 
          export OPENAI_API_KEY="REPLACE_WITH_YOUR_KEY_VALUE_HERE"
 
-- For _Completion_ scenario, one can start with using your model name("COMPLETION_MODEL" in _config.json_ file) as "text_davinci_003". <br>
-And for _Embedding_ scenario, one can use "text-embedding-ada-002" as model name("EMBEDDING_MODEL"in _config.json_ file).
+- For _Completions_ scenario, one can start with using your model name ("COMPLETIONS_MODEL" in _config.json_ file) as "text_davinci_003". <br>
+And for _Embeddings_ scenario, one can use "text-embedding-ada-002" as model name ("EMBEDDINGS_MODEL"in _config.json_ file).
 - To find your "OPENAI_API_BASE" go to https://portal.azure.com, find your resource and then under "Resource Management" -> "Keys and Endpoints" look for the "Endpoint" value.
 - Current OpenAI api version is "2022-12-01".
 
@@ -73,7 +73,6 @@ Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.co
 Python 3.8+ <br>
 Jupyter Notebook 6.5.2
 
-<br>
 <br>
 
 

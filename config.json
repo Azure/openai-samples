@@ -1,6 +1,6 @@
 {
-    "COMPLETION_MODEL": "<Completion Model Name>",
-    "EMBEDDING_MODEL": "<Embedding Model Name>",
+    "COMPLETIONS_MODEL": "<Completions Model Name>",
+    "EMBEDDINGS_MODEL": "<Embeddings Model Name>",
     "OPENAI_API_BASE": "https://<Your Azure Resource Name>.openai.azure.com",
     "OPENAI_API_VERSION": "<OpenAI API Version>"
- }
+}
