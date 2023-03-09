@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis/redis-stack:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-vector-db:/var/lib/redis
+
+volumes:
+  redis-vector-db:
