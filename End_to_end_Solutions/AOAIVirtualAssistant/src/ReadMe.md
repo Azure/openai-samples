@@ -1,6 +1,6 @@
 # <span style="color:red">Important Note</span>
 
-Content in this repository is still a work-in-progress. Please expect frequent updates and development of this demo to adapt to the changes
+Please expect frequent updates and development of this demo to adapt to the changes
 and development of OpenAI offering in Azure. Your feedback and contributions are welcome!
 
 <em>This demo doesn't have full coverage of the scenario, and is more highlighting ideas with how to work with AOAI in this setup. The VA enables a few 
