@@ -18,10 +18,10 @@
         }
     ],
     "safe_driver_rating": 0.22,
-    "home_insurance": false,
+    "home_insurance": true,
     "flood_insurance": false,
     "flood_risk_factor": 0.8,
-    "bundling_discount": false,
+    "bundling_discount": true,
     "safe_driver_discount": false,
     "tracking_device_discount": false,
     "id": "dave"
