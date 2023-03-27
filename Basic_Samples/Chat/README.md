@@ -19,6 +19,7 @@ Refer to the following documents for a better understanding of Azure OpenAI conc
  - [How to generate or manipulate text](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/completions) 
  - [What are embeddings?](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/understand-embeddings)
  - [How to generate embeddings?](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/embeddings?tabs=console)
+ - [How to work with the ChatGPT](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/chatgpt?pivots=programming-language-chat-completions)
 
 # Responsible AI with Azure OpenAI
 At Microsoft, we're committed to the advancement of AI driven by principles that put people first. Generative models such as the ones available in Azure OpenAI have significant potential benefits, but without careful design and thoughtful mitigations, such models have the potential to generate incorrect or even harmful content. Microsoft has made significant investments to help guard against abuse and unintended harm, which includes requiring applicants to show well-defined use cases, incorporating Microsoft’s [principles for responsible AI use](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1:primaryr6), building content filters to support customers, and providing responsible AI implementation guidance to onboarded customers.
@@ -37,11 +38,11 @@ pip install -r requirements.txt
 ```
 
 ### Microsoft Azure Endpoints
-In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set CHAT_GPT_MODEL OPENAI_API_BASE & OPENAI_API_VERSION in _config.json_ file. 
+In order to use the Open AI library or REST API with Microsoft Azure endpoints, you need to set CHATGPT_MODEL, OPENAI_API_BASE & OPENAI_API_VERSION in _config.json_ file. 
 
 ```js
 {
-    "CHAT_GPT_MODEL":"<ChatGPT Model Name>",
+    "CHATGPT_MODEL":"<ChatGPT Model Name>",
     "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
     "OPENAI_API_VERSION":"<OpenAI API Version>"
 }
@@ -52,7 +53,7 @@ In order to use the Open AI library or REST API with Microsoft Azure endpoints, 
 <br>
 One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal.azure.com, find your resource and then under "Resource Management" -> "Keys and Endpoints" look for one of the "Keys" values.
  <br>
- **STEPS** -       
+ Steps to set the key in the environment variables:        
 
       WINDOWS Users: 
          setx OPENAI_API_KEY "REPLACE_WITH_YOUR_KEY_VALUE_HERE"
@@ -61,10 +62,18 @@ One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal
          export OPENAI_API_KEY="REPLACE_WITH_YOUR_KEY_VALUE_HERE"
 
 - To find your "OPENAI_API_BASE" go to https://portal.azure.com, find your resource and then under "Resource Management" -> "Keys and Endpoints" look for the "Endpoint" value.
-- Current OpenAI api version is "2022-12-01".
-- For the sample scenario, one can use "gpt-35-turbo" as "CHAT_GPT_MODEL" in _config_ file. gpt-35-turbo is equivalent to the gpt-3.5-turbo model from OpenAI.
 
-Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
+- For the sample scenario, one can use "gpt-35-turbo" as "CHATGPT_MODEL" in _config_ file. The "gpt-35-turbo" is the deployment name you chose when you want to deploy the ChatGPT or GPT-4 model.
+   ```
+   {
+      "CHATGPT_MODEL":"gpt-35-turbo",
+      "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
+      "OPENAI_API_VERSION":"2023-03-15-preview"
+   }
+   ```
+- The currently available API version for Chat Completions is "2023-03-15-preview".
+
+Learn more about Azure OpenAI Chat Completions [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/chatgpt?pivots=programming-language-chat-completions).
 
 
 ## Requirements
