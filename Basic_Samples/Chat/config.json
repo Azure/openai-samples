@@ -1,5 +1,5 @@
 {
-    "CHAT_GPT_MODEL":"<ChatGPT Model Name>",
+    "CHATGPT_MODEL":"<ChatGPT Model Name>",
     "OPENAI_API_BASE":"https://<Your Azure Resource Name>.openai.azure.com",
     "OPENAI_API_VERSION":"<OpenAI API Version>"
 }
