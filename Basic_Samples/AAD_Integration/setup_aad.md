@@ -6,14 +6,11 @@ Follow the steps below to test access using the CLI.  The example uses `bash` on
 
 ## Prerequisites
 
-1. API access.  You need to be authorized by your team's API administrator to use the API.  See [team API administrators](team_contacts.md).
-2. API endpoint URL.  This is the URL of the API endpoint for your team.  See [team API administrators](team_contacts.md).
-3. API engine name, also known as model deployment name.  This should be `dv3` for most users.  Follow instructions from your [team API administrators](team_contacts.md).
-4. Azure CLI.  You need to have the Azure CLI installed on your machine.  See [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli).
-5. Azure Identity Python package.  You need to have the Azure Identity Python package installed on your machine for the Python examples.
+1. Azure CLI.  You need to have the Azure CLI installed on your machine.  See [Install the Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli).
+2. Azure Identity Python package.  You need to have the Azure Identity Python package installed on your machine for the Python examples.
     * [Setup Python environment](setup_python_env.md) describes how to set up a Python virtual environment and install the required package.
     * For details on the Azure Identity package, see [Azure Identity for Python](https://learn.microsoft.com/en-us/python/api/overview/azure/identity-readme?view=azure-python).
-6. For the CLI examples, you need to have the `jq` command installed on your machine.  See [jq](https://stedolan.github.io/jq/).
+3. For the CLI examples, you need to have the `jq` command installed on your machine.  See [jq](https://stedolan.github.io/jq/).
 
 
 ## Storing your API endpoint URL
