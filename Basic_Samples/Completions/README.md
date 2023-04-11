@@ -53,8 +53,7 @@ In order to use the Open AI library or REST API with Microsoft Azure endpoints, 
 <br>
 One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal.azure.com, find your resource and then under "Resource Management" -> "Keys and Endpoints" look for one of the "Keys" values.
  <br>
- **STEPS** -       
-
+      
       WINDOWS Users: 
          setx OPENAI_API_KEY "REPLACE_WITH_YOUR_KEY_VALUE_HERE"
 
@@ -65,7 +64,7 @@ One can get the OPENAI_API_KEY value from the Azure Portal. Go to https://portal
 And for ChatGPT Completions, one can start with using your model name as "gpt-35-turbo" ("CHATGPT_MODEL" in _config.json_ file).
 
 - To find your "OPENAI_API_BASE" go to https://portal.azure.com, find your resource and then under "Resource Management" -> "Keys and Endpoints" look for the "Endpoint" value.
-- Current OpenAI api version is "2022-12-01".
+- Current OpenAI api version is "2022-12-01". Check out versions [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
 Learn more about Azure OpenAI Service REST API [here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference).
 
