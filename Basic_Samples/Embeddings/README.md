@@ -1,4 +1,4 @@
-# OpenAI Samples
+# Introduction
 
 This folder contains samples demonstrating how to use Embeddings models via Python SDK or REST API.
 
