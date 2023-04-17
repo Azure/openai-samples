@@ -1,0 +1,13 @@
+Document Body
+
+{aspects}
+
+|endoftext|
+
+Write answer for questions only referring to the facts in document above.
+
+|endoftext|
+
+### Questions
+1) Summarize the most common aspects as a list of bullet points, each of one or two words
+
