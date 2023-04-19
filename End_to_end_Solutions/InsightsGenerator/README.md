@@ -17,8 +17,8 @@ However, often despite having loads of data on their fingertips they face analys
 
 This folder contains prompt templates and code samples that can be used to get insights and knowledge from raw unstructured data. 
 These IG samples comes in two flavours:
-a) IG for product reviews
-b) IG for group chats
+* IG for product reviews
+* IG for group chats
 IG extracts high level summaries and dominant topics from the text corpus.
 Various detailed insights are accompanied with supporting references, action items and statistics.
 The tool scales to large number of documents, and will handle more documents than can fit in a prompt.
