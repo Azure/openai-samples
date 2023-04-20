@@ -35,9 +35,7 @@ def extract_top_tags_inner(sentiment_aspects):
     completion = OAI_client.make_prompt_request(prompt, max_tokens = 200, timeout = 10)
     completion_lines = completion.split("\n")
     print("Extracted top tags")
-    #print(completion)
 
-    # TODO: Control hallucinations better here
     # Parse 
     top_tags = []
     for line in completion_lines:

@@ -4,6 +4,8 @@ from . import extract_statistical_summary
 import random
 import pdb
 
+MIN_SENTIMENT_PERCENTAGE = 75
+
 def extract_direct_answer(reviews, user_query:str):
     print ("Reached summary from {len(reviews)} reviews")
     print (reviews[0])
@@ -23,57 +25,10 @@ def extract_direct_answer(reviews, user_query:str):
 
     prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template_summary)
     print (f"Interactive prompt: {prompt}")
-    completion = OAI_client.make_prompt_request(prompt, max_tokens = 200, timeout = 10)
+    timeout = 10
+    max_tokens = 200
+    completion = OAI_client.make_prompt_request(prompt, max_tokens = max_tokens, timeout = timeout)
     out_summary = {"answer" : completion}
-
-    return out_summary
-
-def extract_summary_old(reviews, user_query:str):
-    # This function was giving bad results. This is obsoleted
-
-    print ("Reached summary from {len(reviews)} reviews")
-    print (reviews[0])
-    prompt_template_filename = "insights_generator/core/prompt_template_summary.txt"
-    prompt_template_file = open(prompt_template_filename, encoding = "utf-8")
-    prompt_template_summary = prompt_template_file.read()
-    
-    sentiment_aspects = []
-    for i, review in enumerate(reviews):
-        sentiment_aspects = sentiment_aspects + review["sentiment_aspects_NL"]
-
-    prompt_parameters = {"sentiment_aspects" : "\n".join(sentiment_aspects)}
-    prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template_summary)
-    if len(user_query) > 0:
-        prompt = prompt.replace("### Questions", f"### Questions: {user_query}")
-        print (f"Interactive prompt: {prompt}")
-
-    completion = OAI_client.make_prompt_request(prompt, max_tokens = 200, timeout = 10)
-    completion_lines = completion.split("\n")
-    print("Extracted summaries")
-
-    # Parse the summary
-    p = re.compile("1\)((.|\n)*)2")
-    result = p.search(completion)
-    if not result is None:
-        overall = result.group(1)
-    else:
-        overall = ""
-
-    p = re.compile("2\)((.|\n)*)3")
-    result = p.search(completion)
-    if not result is None:
-        high_lowlights = result.group(1)
-    else:
-        high_lowlights = ""
-
-    p = re.compile("3\)((.|\n)*)")
-    result = p.search(completion)
-    if not result is None:
-        actions = result.group(1)
-    else:
-        actions = ""
-
-    out_summary = {"summary" : completion, "overall" : overall, "high_lowlights" : high_lowlights, "actions" : actions}
 
     return out_summary
 
@@ -85,9 +40,10 @@ def overall_statistics_to_raw_text(overall_statistics_dict):
     for top_aspect, statistics in overall_statistics_dict.items():
         percentage_positive = statistics["percentage_positive"]
         if not percentage_positive is None:
-            if percentage_positive >= 75:
+            percentage_negative = 100 - percentage_positive
+            if percentage_positive >= MIN_SENTIMENT_PERCENTAGE:
                 positive_aspects.append(top_aspect)
-            elif percentage_positive <= 25:
+            elif percentage_negative >= MIN_SENTIMENT_PERCENTAGE:
                 negative_aspects.append(top_aspect)
 
     # Convert into raw text
@@ -111,7 +67,9 @@ def extract_statistical_summary_NL(product_category, overall_statistics_dict):
 
     prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template_summary)
 
-    completion = OAI_client.make_prompt_request(prompt, max_tokens = 200, timeout = 10)
+    timeout = 10
+    max_tokens = 200
+    completion = OAI_client.make_prompt_request(prompt, max_tokens = max_tokens, timeout = timeout)
     overall_summary = completion.strip()
 
     print("Extracted NL version of statistical summary.")
@@ -131,8 +89,9 @@ def summarize_aspect_summaries(product_category, aspect_summaries):
     prompt_template = prompt_template_file.read()
 
     # Limit to random sample of 10 aspects
-    if len(aspect_summaries) > 10:
-        aspect_summaries = random.sample(aspect_summaries, 10)
+    MAX_ASPECTS_COUNT = 10
+    if len(aspect_summaries) > MAX_ASPECTS_COUNT:
+        aspect_summaries = random.sample(aspect_summaries, MAX_ASPECTS_COUNT)
 
     prompt_parameters = {
             "product_category" : product_category,
@@ -141,7 +100,9 @@ def summarize_aspect_summaries(product_category, aspect_summaries):
 
     prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template)
 
-    completion = OAI_client.make_prompt_request(prompt, max_tokens = 500, timeout = 10)
+    timeout = 10
+    max_tokens = 500
+    completion = OAI_client.make_prompt_request(prompt, max_tokens = max_tokens, timeout = timeout)
 
     # Strip whitespace
     completion = completion.strip()

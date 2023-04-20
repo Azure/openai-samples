@@ -10,8 +10,8 @@ tl;dr"""
             "review_text" : review["review_text"]
             }
     prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template)
-    #print(prompt)
-    completion = OAI_client.make_prompt_request(prompt, timeout = 5)
+    timeout = 5
+    completion = OAI_client.make_prompt_request(prompt, timeout = timeout)
     
     return(completion)
 
@@ -59,6 +59,7 @@ def summarize_reviews(reviews):
             }
     prompt = OAI_client.construct_prompt(prompt_parameters, prompt_template)
     #print(prompt)
-    overall_summary = OAI_client.make_prompt_request(prompt, timeout = 5)
+    timeout = 5
+    overall_summary = OAI_client.make_prompt_request(prompt, timeout = timeout)
     
     return(overall_summary, summaries)
