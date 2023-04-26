@@ -4,27 +4,12 @@ connexion[aiohttp,swagger-ui] <= 2.3.0; python_version=="3.5" or python_version=
 # connexion requires werkzeug but connexion < 2.4.0 does not install werkzeug
 # we must peg werkzeug versions below to fix connexion
 # https://github.com/zalando/connexion/pull/1044
-werkzeug == 0.16.1; python_version=="3.5" or python_version=="3.4"
+werkzeug == 2.2.3; python_version=="3.5" or python_version=="3.4"
 swagger-ui-bundle == 0.0.9
 aiohttp_jinja2 == 1.5.0
-azure-common >= 1.1.28
-azure-core >= 1.26.2
-azure-graphrbac >= 0.61.1
-azure-identity >= 1.12.0
-azure-mgmt-authorization >= 3.0.0
-azure-mgmt-containerregistry >= 10.0.0
-azure-mgmt-core >= 1.3.2
-azure-mgmt-keyvault >= 10.1.0
-azure-mgmt-resource >= 21.2.1
-azure-mgmt-storage >= 20.1.0
-azure-search-documents >= 11.4.0b2
-azure-storage-blob >= 12.14.1
-azureml-core >= 1.48.0
 requests
 bs4
 joblib
 scikit-learn
-pylcs
 python-dateutil
-sklearn
 numpy
