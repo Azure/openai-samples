@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "azure_table_account_name": "",
+    "azure_table_key": "",
+    "azure_table_name": "embeddings",
+    "open_ai_resource_name": "",
+    "open_ai_deployment_name": "text-search-ada-doc-001",
+    "open_ai_api_version": "2022-12-01",
+    "open_ai_api_key": ""
+  }
+}
